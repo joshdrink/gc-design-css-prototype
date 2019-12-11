@@ -1,0 +1,57 @@
+:root {
+    /* Containers =========================================================== */
+    /* Small: used for containing text and ensuring readability of long swaths of text. */
+    --gc-layout-small: 39rem;
+    /* Medium: used for general UI. */
+    --gc-layout-medium: 60rem;
+    /* Large: used for large grids, or more complex UI that needs horizontal space. */
+    --gc-layout-large: 80rem;
+    /* There should also be a larger, default container that maintains full-screen width (with padding if we want whitespace on the edges) */
+    /* Whitespace =========================================================== */
+    /* First, we set our defaults. These, along with "whitespace-multiplier" below, are the variables that get theme equivalents.  */
+    --gc-margin-default: 1rem;
+    --gc-padding-default: 1rem;
+    /* The multiplier that is used in our media query calculations to ensure consistency in scale as the device's screen grows. */
+    --gc-whitespace-multiplier: 1.4;
+    /* Now we set the values for usage. These aren't theme editable because they use the default values set above. */
+    --gc-margin-value: var(--gd-margin-default, var(--gc-margin-default));
+    --gc-padding-value: var(--gd-margin-default, var(--gc-margin-default));
+    /* Typography =========================================================== */
+    /* Font Types - to help avoid using multiple fonts inconsistently, we can set default fonts for serif, sans-serif, monospace, and script. This doesn't prevent other fonts from being used, but it allows us to set the fonts on components and maintain that consistency across the experience. */
+    --gc-font-sans: "Arial", sans-serif;
+    --gc-font-sans-serif: var(--gd-font-sans, var(--gc-font-sans)); /* Sometimes people want to type out the whole name, so this is repeated for their sake. */
+    --gc-font-serif: "Times New Roman", serif;
+    --gc-font-mono: "Consolas", monospace;
+    --gc-font-monospace: var(--gd-font-mono, var(--gc-font-mono)); /* Same idea here. */
+    --gc-font-script: script;
+    /* We can define a universal line height. */
+    --gc-font-line-height: 1.5;
+    /* This variable should be used on the HTML. It tells the site to respect the user's browser font size setting at 100%. Typically this variable can be set to something slightly lower than 100% on smaller devices, and something slightly higher on larger devices. Providing a variable for this allows the site to cater to different audiences (maybe they want their default font size to always be 150% of the user's setting to ensure visibility). */
+    --gc-font-size-setting: 100%;
+    /* Now we set the default font size. This variable allows us to manipulate the font scale using a multiplier, similarly to the margins and padding above. */
+    --gc-font-size-default: 1rem;
+    /* Now the multiplier (this creates a proper typography scale, Google "type scales" for more info. */
+    --gc-font-size-scale: 1.333;
+    --gc-font-size-caption: calc(var(--gd-font-size-default, var(--gc-font-size-default)) / var(--gd-font-size-scale, var(--gc-font-size-scale)));
+    --gc-font-size-copy: var(--gd-font-size-default, var(--gc-font-size-default));
+    --gc-font-size-h5: calc(var(--gd-font-size-default, var(--gc-font-size-default)) * var(--gd-font-size-scale, var(--gc-font-size-scale)));
+    --gc-font-size-h4: calc(var(--gd-font-size-h5, var(--gc-font-size-h5)) * var(--gd-font-size-scale, var(--gc-font-size-scale)));
+    --gc-font-size-h3: calc(var(--gd-font-size-h4, var(--gc-font-size-h4)) * var(--gd-font-size-scale, var(--gc-font-size-scale)));
+    --gc-font-size-h2: calc(var(--gd-font-size-h3, var(--gc-font-size-h3)) * var(--gd-font-size-scale, var(--gc-font-size-scale)));
+    --gc-font-size-h1: calc(var(--gd-font-size-h2, var(--gc-font-size-h2)) * var(--gd-font-size-scale, var(--gc-font-size-scale)));
+    /* Colors =============================================================== */
+    /* Define black, gray, and white. */
+    --gc-palette-white: rgba(255, 255, 255, 1);
+    --gc-palette-gray: rgba(225, 225, 225, 1);
+    --gc-palette-black: rgba(30, 30, 30, 1);
+    /* Define "stoplight" colors - these are used in instances where you need to indicate go, slow, stop, good, warning, bad, etc. */
+    --gc-palette-stop: red;
+    --gc-palette-slow: yellow;
+    --gc-palette-go: green;
+    /* Define the actual theme colors. The names of these variables can change, but I like the consistency. We might want to go with "main color" and "accent color" etc. */
+    --gc-theme-color-1: rgba(50, 0, 200, 1);
+    --gc-theme-color-2: rgba(60, 0, 180, 1);
+    --gc-theme-color-3: rgba(70, 0, 160, 1);
+    --gc-theme-color-4: rgba(80, 0, 140, 1);
+    --gc-theme-color-5: rgba(90, 0, 120, 1);
+}

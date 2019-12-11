@@ -1,0 +1,10 @@
+@import "variables-default.css";
+@import "variables-theme.css";
+/* Components */
+@import "markup/components/blockquote/blockquote.css";
+@import "markup/components/button/button.css";
+/* Composites */
+@import "markup/composites/accordion/accordion.css";
+body {
+    background: var(--gd-theme-color-2, var(--gc-theme-color-2));
+}

@@ -1,0 +1,29 @@
+{
+  "name": "gc-design-css-prototype",
+  "version": "0.1.0",
+  "description": "A working prototype that illustrates how CSS themeing might work in the GC Design System.",
+  "main": "app/index.js",
+  "scripts": {
+    "dev": "npx gulp",
+    "build": "npx gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshdrink/gc-design-css-prototype"
+  },
+  "author": "Josh Beveridge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshdrink/gc-design-css-prototype/issues"
+  },
+  "homepage": "https://joshbeveridge.ca/gc-design-css-prototype",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-twig": "^1.2.0",
+    "run-sequence": "^2.2.1"
+  }
+}
