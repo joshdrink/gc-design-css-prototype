@@ -1,0 +1,136 @@
+/* Example: */
+/* First, we set how we want the margin value to change in each of our media queries. To do this, we use the default value in a calc function to multiple or divide it by our whitespace multiplier, which then sets the value variable to our new value for that media query. */
+@media screen and (min-width: 20em) {
+    /* Nothing */
+}
+@media screen and (min-width: 30em) {
+    /* Nothing */
+}
+@media screen and (min-width: 48em) {
+    :root {
+        --default-margin-value: calc(var(--theme-margin-default, var(--default-margin-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+        --default-padding-value: calc(var(--theme-padding-default, var(--default-padding-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+    }
+}
+@media screen and (min-width: 64em) {
+    :root {
+        --default-margin-value: calc(var(--theme-margin-default, var(--default-margin-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+        --default-padding-value: calc(var(--theme-padding-default, var(--default-padding-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+    }
+}
+@media screen and (min-width: 64.01em) {
+    :root {
+        --default-margin-value: calc(var(--theme-margin-default, var(--default-margin-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+        --default-padding-value: calc(var(--theme-padding-default, var(--default-padding-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+    }
+}
+@media screen and (min-width: 100em) {
+    :root {
+        --default-margin-value: calc(var(--theme-margin-default, var(--default-margin-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+        --default-padding-value: calc(var(--theme-padding-default, var(--default-padding-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+    }
+}
+@media screen and (min-width: 110em) {
+    :root {
+        --default-margin-value: calc(var(--theme-margin-default, var(--default-margin-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+        --default-padding-value: calc(var(--theme-padding-default, var(--default-padding-default)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)) * var(--theme-whitespace-multiplier, var(--default-whitespace-multiplier)));
+    }
+}
+
+/* Now we define our utility classes, starting with single values, and then double, and so on. */
+.gc-margin-all {
+    margin: var(--theme-margin-value, var(--default-margin-value));
+}
+.gc-margin-top {
+    margin-top: var(--theme-margin-value, var(--default-margin-value));
+}
+.gc-margin-right {
+    margin-right: var(--theme-margin-value, var(--default-margin-value));
+}
+.gc-margin-bottom {
+    margin-bottom: var(--theme-margin-value, var(--default-margin-value));
+}
+.gc-margin-left {
+    margin-left: var(--theme-margin-value, var(--default-margin-value));
+}
+.gc-margin-tb {
+    margin-top: var(--theme-margin-value, var(--default-margin-value));
+    margin-bottom: var(--theme-margin-value, var(--default-margin-value));
+}
+.gc-margin-rl {
+    margin-right: var(--theme-margin-value, var(--default-margin-value));
+    margin-left: var(--theme-margin-value, var(--default-margin-value));
+}
+/* Double margins... */
+.gc-margin-all-2 {
+    margin: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+.gc-margin-top-2 {
+    margin-top: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+.gc-margin-right-2 {
+    margin-right: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+.gc-margin-bottom-2 {
+    margin-bottom: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+.gc-margin-left-2 {
+    margin-left: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+.gc-margin-tb-2 {
+    margin-top: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+    margin-bottom: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+.gc-margin-rl-2 {
+    margin-right: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+    margin-left: calc(var(--theme-margin-value, var(--default-margin-value)) * 2);
+}
+
+/* And padding... */
+.gc-padding-all {
+    padding: var(--theme-padding-value, var(--default-padding-value));
+}
+.gc-padding-top {
+    padding-top: var(--theme-padding-value, var(--default-padding-value));
+}
+.gc-padding-right {
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+}
+.gc-padding-bottom {
+    padding-bottom: var(--theme-padding-value, var(--default-padding-value));
+}
+.gc-padding-left {
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+}
+.gc-padding-tb {
+    padding-top: var(--theme-padding-value, var(--default-padding-value));
+    padding-bottom: var(--theme-padding-value, var(--default-padding-value));
+}
+.gc-padding-rl {
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+}
+/* Double padding... */
+.gc-padding-all-2 {
+    padding: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
+.gc-padding-top-2 {
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
+.gc-padding-right-2 {
+    padding-right: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
+.gc-padding-bottom-2 {
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
+.gc-padding-left-2 {
+    padding-left: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
+.gc-padding-tb-2 {
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
+.gc-padding-rl-2 {
+    padding-right: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+    padding-left: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}

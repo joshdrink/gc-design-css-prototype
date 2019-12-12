@@ -23,9 +23,31 @@
 
     <body>
 
-        <blockquote class="gc-blockquote">
-            <p>This is blockquote text.</p>
-        </blockquote>
+        <div class="gc-margin-tb-2">
+            <div class="gc-container-medium">
+                <h1 class="gc-h1 gc-margin-top-2 gc-margin-bottom">Welcome to the CSS Proposal</h1>
+                <p class="gc-font-sans-serif gc-margin-bottom">Below, you'll find examples of two components (blockquotes, buttons) and some typography.</p>
+                <p class="gc-font-sans-serif gc-margin-bottom">Each component has its own structural CSS found in its folder. This structural style refers to any paint related style using CSS variables. The typography is styled using CSS variables as well, but its CSS can be found in the root CSS folder as it refers to the product as a whole.</p>
+                <p class="gc-font-sans-serif gc-margin-bottom">CSS variables in this proposal are written like this: <code>background-color: var(--theme-brand-color-1, var(--default-brand-color-1));</code>, where the default brand color is the repository's default theme, and the theme brand color refers to a variable that the user of the design system can control if they'd like to alter things.</p>
+                <p class="gc-font-sans-serif gc-margin-bottom-2">Inside <code>./app/css/</code> you'll find a file called <code>variables-theme.css</code> with a handful of variables that have been commented out. This file emulates a user of the design system building their own theme for their brand. Uncomment the variables and save the file with the node command running to see how altering these variables provide a themeing experience.</p>
+                {# Example Blockquote #}
+                {% include "markup/components/blockquote/blockquote.html" %}
+                {# Example Button #}
+                <div class="gc-margin-top">
+                    {% include "markup/components/button/button.html" with {"theme": 1} %}
+                    {% include "markup/components/button/button.html" with {"theme": 2} %}
+                    {% include "markup/components/button/button.html" with {"theme": 3} %}
+                    {% include "markup/components/button/button.html" with {"theme": 4} %}
+                    {% include "markup/components/button/button.html" with {"theme": 5} %}
+                </div>
+                {# Example Typography #}
+                <h1 class="gc-h1 gc-margin-top-2 gc-margin-bottom">Heading 1</h1>
+                <h2 class="gc-h2 gc-margin-top-2 gc-margin-bottom">Heading 2</h2>
+                <h3 class="gc-h3 gc-margin-top-2 gc-margin-bottom">Heading 3</h3>
+                <h4 class="gc-h4 gc-margin-top-2 gc-margin-bottom">Heading 4</h4>
+                <h5 class="gc-h5 gc-margin-top-2 gc-margin-bottom">Heading 5</h5>
+            </div>
+        </div>
 
         {# JavaScript #}
         <script src="js/app.js"></script>

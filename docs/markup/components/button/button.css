@@ -1,3 +1,85 @@
-.gc-button {
-    
+.gc-button-1 {
+    background: none;
+    border: 1px solid var(--theme-brand-color-1, var(--default-brand-color-1));
+    color: var(--theme-brand-color-1, var(--default-brand-color-1));
+    cursor: pointer;
+    font-family: var(--theme-font-sans, var(--default-font-sans));
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+    transition: all .2s ease;
+}
+.gc-button-1:hover {
+    background: var(--theme-brand-color-1, var(--default-brand-color-1));
+    color: var(--theme-brand-white, var(--default-brand-white));
+    transition: all .2s ease;
+}
+.gc-button-2 {
+    background: none;
+    border: 1px solid var(--theme-brand-color-2, var(--default-brand-color-2));
+    color: var(--theme-brand-color-2, var(--default-brand-color-2));
+    cursor: pointer;
+    font-family: var(--theme-font-sans, var(--default-font-sans));
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+    transition: all .2s ease;
+}
+.gc-button-2:hover {
+    background: var(--theme-brand-color-2, var(--default-brand-color-2));
+    color: var(--theme-brand-white, var(--default-brand-white));
+    transition: all .2s ease;
+}
+.gc-button-3 {
+    background: none;
+    border: 1px solid var(--theme-brand-color-3, var(--default-brand-color-3));
+    color: var(--theme-brand-color-3, var(--default-brand-color-3));
+    cursor: pointer;
+    font-family: var(--theme-font-sans, var(--default-font-sans));
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+    transition: all .2s ease;
+}
+.gc-button-3:hover {
+    background: var(--theme-brand-color-3, var(--default-brand-color-3));
+    color: var(--theme-brand-white, var(--default-brand-white));
+    transition: all .2s ease;
+}
+.gc-button-4 {
+    background: none;
+    border: 1px solid var(--theme-brand-color-4, var(--default-brand-color-4));
+    color: var(--theme-brand-color-4, var(--default-brand-color-4));
+    cursor: pointer;
+    font-family: var(--theme-font-sans, var(--default-font-sans));
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+    transition: all .2s ease;
+}
+.gc-button-4:hover {
+    background: var(--theme-brand-color-4, var(--default-brand-color-4));
+    color: var(--theme-brand-white, var(--default-brand-white));
+    transition: all .2s ease;
+}
+.gc-button-5 {
+    background: none;
+    border: 1px solid var(--theme-brand-color-5, var(--default-brand-color-5));
+    color: var(--theme-brand-color-5, var(--default-brand-color-5));
+    cursor: pointer;
+    font-family: var(--theme-font-sans, var(--default-font-sans));
+    padding-top: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-right: var(--theme-padding-value, var(--default-padding-value));
+    padding-bottom: calc(var(--theme-padding-value, var(--default-padding-value)) / 2);
+    padding-left: var(--theme-padding-value, var(--default-padding-value));
+    transition: all .2s ease;
+}
+.gc-button-5:hover {
+    background: var(--theme-brand-color-5, var(--default-brand-color-5));
+    color: var(--theme-brand-white, var(--default-brand-white));
+    transition: all .2s ease;
 }

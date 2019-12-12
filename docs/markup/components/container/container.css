@@ -1,0 +1,18 @@
+.gc-container-small {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--theme-layout-small, var(--default-layout-small));
+    width: 95%;
+}
+.gc-container-medium {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--theme-layout-medium, var(--default-layout-medium));
+    width: 95%;
+}
+.gc-container-large {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: var(--theme-layout-large, var(--default-layout-large));
+    width: 95%;
+}

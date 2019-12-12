@@ -1,0 +1,7 @@
+.gc-blockquote {
+    background: var(--theme-brand-gray, var(--default-brand-gray));
+    border-left: .5rem solid var(--theme-brand-color-5, var(--default-brand-color-5));
+    font-family: var(--theme-font-sans, var(--default-font-sans));
+    margin: 0;
+    padding: calc(var(--theme-padding-value, var(--default-padding-value)) * 2);
+}
